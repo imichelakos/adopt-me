@@ -1,5 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
-/node_modules
-/.idea/workspace.xml
 *.xml
-/.idea/codeStyles/Project.xml
+node_modules
+.cache/
+dist/
+.env
+.DS_Store
+coverage/
+.vscode/
