@@ -24,40 +24,7 @@ const SearchParams = () => {
             onChange={event => updateLocation(event.target.value)}
           />
         </label>
-        {/*<label htmlFor="animal">*/}
-        {/*  Animal*/}
-        {/*  <select*/}
-        {/*      id="animal"*/}
-        {/*      value={animal}*/}
-        {/*      onChange={event => updateAnimal(event.target.value)}*/}
-        {/*      onBlur={event => updateAnimal(event.target.value)}*/}
-        {/*  >*/}
-        {/*    <option />*/}
-        {/*    {ANIMALS.map(animal => (*/}
-        {/*        <option key={animal} value={animal}>*/}
-        {/*          {animal}*/}
-        {/*        </option>*/}
-        {/*    ))}*/}
-        {/*  </select>*/}
-        {/*</label>*/}
         <AnimalDropdown/>
-        {/*<label htmlFor="breed">*/}
-        {/*  Breed*/}
-        {/*  <select*/}
-        {/*      id="breed"*/}
-        {/*      value = {breed}*/}
-        {/*      onChange = {event => updateBreed(event.target.value)}*/}
-        {/*      onBlur = {event => updateBreed(event.target.value)}*/}
-        {/*      disabled = {breeds.length === 0}*/}
-        {/*  >*/}
-        {/*    <option />*/}
-        {/*    {breeds.map(breed=>(*/}
-        {/*        <option key={breed} value={breed}>*/}
-        {/*          {breed}*/}
-        {/*        </option>*/}
-        {/*    ))}*/}
-        {/*  </select>*/}
-        {/*</label>*/}
         <BreedDropdown/>
         <button>Submit</button>
       </form>
