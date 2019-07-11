@@ -3,7 +3,6 @@ import pet, { ANIMALS } from '@frontendmasters/pet';
 import useDropdown from './useDropdown';
 
 const SearchParams = () => {
-
   // useState returns to us an array with two things in it: the current value
   // of that state and a function to update that function.
   // We're using a feature of JavaScript called destructuring to get both of those thing`s out of the array.
@@ -16,8 +15,8 @@ const SearchParams = () => {
     updateBreeds([]);
     updateBreed("");
 
-    pet.breeds(animal).then(({breeds})=>{
-      const breedStrings = breeds.map(({name})=> name);
+    pet.breeds(animal).then(({breeds:apiBreeds})=>{
+      const breedStrings = apiBreeds.map(({name})=> name);
       updateBreeds(breedStrings);
     },console.error);
   }, [animal,updateBreed,updateBreeds]);
