@@ -24,8 +24,9 @@
   },
   "dependencies": {
     "@frontendmasters/pet": "^1.0.3",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "@reach/router": "^1.2.1",
+    "react": "15.x || 16.x || 16.4.0-alpha.0911da3",
+    "react-dom": "15.x || 16.x || 16.4.0-alpha.0911da3"
   },
   "browserslist": [
     "last 2 Chrome versions",

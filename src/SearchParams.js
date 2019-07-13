@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import pet, { ANIMALS } from '@frontendmasters/pet';
 import useDropdown from './useDropdown';
+import Results from './Results';
 
 const SearchParams = () => {
   // useState returns to us an array with two things in it: the current value
@@ -53,6 +54,7 @@ const SearchParams = () => {
         <BreedDropdown/>
         <button>Submit</button>
       </form>
+      <Results pets={pets} />>
     </div>
   );
 };
