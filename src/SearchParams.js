@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import pet, { ANIMALS } from '@frontendmasters/pet';
 import useDropdown from './useDropdown';
 import Results from './Results';
+import ThemeContext from "./ThemeContext";
 
 const SearchParams = () => {
+  const [theme, setTheme] = useContext(ThemeContext);
   // useState returns to us an array with two things in it: the current value
   // of that state and a function to update that function.
   // We're using a feature of JavaScript called destructuring to get both of those thing`s out of the array.
@@ -52,7 +54,20 @@ const SearchParams = () => {
         </label>
         <AnimalDropdown/>
         <BreedDropdown/>
-        <button>Submit</button>
+        <label htmlFor="theme">
+          Theme
+          <select
+              value={theme}
+              onChange={event => setTheme(event.target.value)}
+              onBlur={event => setTheme(event.target.value)}
+          >
+            <option value="darkblue">Dark Blue</option>
+            <option value="peru">Peru</option>
+            <option value="chartreuse">Chartreuse</option>
+            <option value="mediumorchid">Medium Orchid</option>
+          </select>
+        </label>
+        <button style={{ backgroundColor: theme }}>Submit</button>
       </form>
       <Results pets={pets} />>
     </div>
